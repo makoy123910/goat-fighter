@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://duvinbhgpggmh"]
+
+[ext_resource type="Script" uid="uid://bq1o27gvjnspd" path="res://health_bar.gd" id="1_ehfci"]
+[ext_resource type="Texture2D" uid="uid://c1ufjtih4s8hb" path="res://GoatFighter/Icons/HP1.png" id="2_l7q0j"]
+
+[node name="HealthBar" type="Control" unique_id=1322926936]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_ehfci")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1545590463]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HP1" type="TextureRect" parent="HBoxContainer" unique_id=1273327067]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_l7q0j")
+expand_mode = 1
+
+[node name="HP2" type="TextureRect" parent="HBoxContainer" unique_id=246493740]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_l7q0j")
+expand_mode = 1
+
+[node name="HP3" type="TextureRect" parent="HBoxContainer" unique_id=1789740445]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_l7q0j")
+expand_mode = 1

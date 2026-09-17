@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dqca6uq1qdrcd"]
+
+[ext_resource type="Script" uid="uid://j34ntn1nw55x" path="res://goat_combat.gd" id="1_g5cf2"]
+[ext_resource type="Texture2D" uid="uid://l7r15gs8hkdr" path="res://GoatFighter/Backgrounds/Field1.png" id="1_w6ei4"]
+[ext_resource type="Script" uid="uid://bth0yr105pnkl" path="res://goat_1.gd" id="2_g5cf2"]
+[ext_resource type="Texture2D" uid="uid://byngey0tyjmuy" path="res://GoatFighter/Goats/Goat1.png" id="2_w4d77"]
+[ext_resource type="Texture2D" uid="uid://lu00jgcuv6i5" path="res://GoatFighter/Goats/Goat3.png" id="3_g5cf2"]
+[ext_resource type="Script" uid="uid://5yc6ogybx7x8" path="res://goat_2.gd" id="4_tdcns"]
+[ext_resource type="PackedScene" uid="uid://duvinbhgpggmh" path="res://GoatFighter/Scenes/health_bar.tscn" id="7_x3x6l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ri5fd"]
+radius = 33.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tdcns"]
+radius = 33.0
+
+[node name="goat_combat" type="Node2D" unique_id=1895696075]
+script = ExtResource("1_g5cf2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1771864869]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 360.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w6ei4")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1765230977]
+position = Vector2(181, 318)
+
+[node name="Goat1" type="CharacterBody2D" parent="." unique_id=205541441]
+position = Vector2(88, 491.99997)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_g5cf2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Goat1" unique_id=1973444977]
+texture = ExtResource("2_w4d77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goat1" unique_id=869454121]
+position = Vector2(85, -94.99985)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_ri5fd")
+
+[node name="Goat2" type="CharacterBody2D" parent="." unique_id=266860356]
+position = Vector2(265, 494.99997)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("4_tdcns")
+
+[node name="Sprite2D" type="Sprite2D" parent="Goat2" unique_id=422698283]
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("3_g5cf2")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goat2" unique_id=242796554]
+position = Vector2(-84.99999, -94.99984)
+shape = SubResource("CircleShape2D_tdcns")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1962349576]
+
+[node name="Goat1HPBar" parent="CanvasLayer" unique_id=1322926936 instance=ExtResource("7_x3x6l")]
+offset_left = 38.0
+offset_top = 575.0
+offset_right = 38.0
+offset_bottom = 575.0
+offset_transform_position = Vector2(20, 20)
+
+[node name="Goat2HPBar" parent="CanvasLayer" unique_id=442736362 instance=ExtResource("7_x3x6l")]
+offset_left = 232.0
+offset_top = 573.0
+offset_right = 232.0
+offset_bottom = 573.0
+offset_transform_position = Vector2(240, 20)

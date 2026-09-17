@@ -1,0 +1,367 @@
+[gd_scene format=3 uid="uid://btdihksk7kbip"]
+
+[ext_resource type="Script" uid="uid://dq6xbhwksikjd" path="res://GoatFighter/Scenes/goat_matching.gd" id="1_7v6l6"]
+[ext_resource type="Texture2D" uid="uid://d18m1k17by5f2" path="res://GoatFighter/Panels/Blue01.png" id="1_omxvi"]
+[ext_resource type="Texture2D" uid="uid://dqvku4rlripne" path="res://GoatFighter/Portrait_BG/graybg1.png" id="2_v7o15"]
+[ext_resource type="Texture2D" uid="uid://byngey0tyjmuy" path="res://GoatFighter/Goats/Goat1.png" id="3_i2vkf"]
+[ext_resource type="Texture2D" uid="uid://cc0einxpwy33n" path="res://GoatFighter/Frames/Untitled299_20260917092026.png" id="4_467q4"]
+[ext_resource type="Texture2D" uid="uid://c1ufjtih4s8hb" path="res://GoatFighter/Icons/HP1.png" id="5_o780f"]
+[ext_resource type="Texture2D" uid="uid://d1ug57ge8vua7" path="res://GoatFighter/Panels/SetPanel.png" id="6_7v6l6"]
+[ext_resource type="Texture2D" uid="uid://f431q77bpjh0" path="res://GoatFighter/RPS/Paper.png" id="7_0a1jb"]
+[ext_resource type="Texture2D" uid="uid://b227y40w6sfrp" path="res://GoatFighter/RPS/Empty.png" id="8_ac7dy"]
+[ext_resource type="Texture2D" uid="uid://d00kobh51410j" path="res://GoatFighter/Buttons/Button01.png" id="9_v1dj4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjhwk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2lwg"]
+
+[node name="Goat_matching" type="Control" unique_id=947875259]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7v6l6")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1035124391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_omxvi")
+
+[node name="Portrait_Background" type="TextureRect" parent="Background" unique_id=493127564]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -300.0
+offset_right = 25.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v7o15")
+expand_mode = 1
+
+[node name="Goat_Portrait" type="TextureRect" parent="Background/Portrait_Background" unique_id=1021882986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_i2vkf")
+expand_mode = 1
+
+[node name="Portrait_Frame" type="TextureRect" parent="Background/Portrait_Background" unique_id=1825526797]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_467q4")
+expand_mode = 1
+
+[node name="HP" type="TextureRect" parent="Background" unique_id=1875751739]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 147.0
+offset_right = 288.0
+offset_bottom = 217.0
+texture = ExtResource("5_o780f")
+expand_mode = 1
+
+[node name="HPLabel" type="Label" parent="Background/HP" unique_id=54159204]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 23.0
+offset_right = 99.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 30
+text = "x3"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background" unique_id=237179525]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 211.0
+offset_right = 99.0
+offset_bottom = 311.0
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Background/VBoxContainer" unique_id=405155624]
+layout_mode = 2
+
+[node name="Set1" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer1" unique_id=300720599]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("6_7v6l6")
+expand_mode = 1
+
+[node name="SetLabel" type="Label" parent="Background/VBoxContainer/HBoxContainer1/Set1" unique_id=1933489418]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Set 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/HBoxContainer1/Set1" unique_id=1947586797]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 7.0
+offset_right = 371.0
+offset_bottom = 107.0
+theme_override_constants/separation = -31
+
+[node name="RPS1" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer1/Set1/HBoxContainer" unique_id=1323976510]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_0a1jb")
+expand_mode = 1
+
+[node name="RPS2" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer1/Set1/HBoxContainer" unique_id=1704512282]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_0a1jb")
+expand_mode = 1
+
+[node name="RPS3" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer1/Set1/HBoxContainer" unique_id=1443601883]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_0a1jb")
+expand_mode = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Background/VBoxContainer" unique_id=1858717192]
+layout_mode = 2
+
+[node name="Set2" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer2" unique_id=1969365656]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("6_7v6l6")
+expand_mode = 1
+
+[node name="SetLabel" type="Label" parent="Background/VBoxContainer/HBoxContainer2/Set2" unique_id=795993880]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -13.0
+offset_right = 15.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Set 2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/HBoxContainer2/Set2" unique_id=675802481]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 7.0
+offset_right = 371.0
+offset_bottom = 107.0
+theme_override_constants/separation = -31
+
+[node name="RPS1" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer2/Set2/HBoxContainer" unique_id=1343153425]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_0a1jb")
+expand_mode = 1
+
+[node name="RPS2" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer2/Set2/HBoxContainer" unique_id=851083335]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_0a1jb")
+expand_mode = 1
+
+[node name="RPS3" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer2/Set2/HBoxContainer" unique_id=394812415]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_0a1jb")
+expand_mode = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Background/VBoxContainer" unique_id=1642661721]
+layout_mode = 2
+
+[node name="Set3" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer3" unique_id=2048733221]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("6_7v6l6")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/HBoxContainer3/Set3" unique_id=614891084]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 7.0
+offset_right = 371.0
+offset_bottom = 107.0
+theme_override_constants/separation = -31
+
+[node name="RPS1" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer3/Set3/HBoxContainer" unique_id=1678449535]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_ac7dy")
+expand_mode = 1
+
+[node name="RPS2" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer3/Set3/HBoxContainer" unique_id=629510534]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_ac7dy")
+expand_mode = 1
+
+[node name="RPS3" type="TextureRect" parent="Background/VBoxContainer/HBoxContainer3/Set3/HBoxContainer" unique_id=906475009]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_ac7dy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/HBoxContainer3/Set3" unique_id=605408765]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Set 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonsRow" type="HBoxContainer" parent="Background" unique_id=2100562279]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="MatchImg" type="NinePatchRect" parent="Background/ButtonsRow" unique_id=1198462117]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("9_v1dj4")
+
+[node name="MatchLabel" type="Label" parent="Background/ButtonsRow/MatchImg" unique_id=2075530855]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 25.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Match"
+
+[node name="MatchButton" type="Button" parent="Background/ButtonsRow/MatchImg" unique_id=2079038986]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -35.0
+offset_right = 40.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gjhwk")
+
+[node name="RejectImg" type="NinePatchRect" parent="Background/ButtonsRow" unique_id=294384020]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("9_v1dj4")
+
+[node name="RejectLabel" type="Label" parent="Background/ButtonsRow/RejectImg" unique_id=2140538797]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -16.0
+offset_right = 25.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reject"
+
+[node name="RejectButton" type="Button" parent="Background/ButtonsRow/RejectImg" unique_id=1672427538]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -35.0
+offset_right = 40.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a2lwg")
+
+[connection signal="pressed" from="Background/ButtonsRow/MatchImg/MatchButton" to="." method="_on_match_button_pressed"]
